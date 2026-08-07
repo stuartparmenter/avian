@@ -289,8 +289,8 @@ fn update_camera_transform(
         true,
         &SpatialQueryFilter::from_excluded_entities([player_entity]),
     ) {
-        camera.translation = player_transform.translation
-            + camera.back() * (hit.distance.val_num_f32() - 1.0).max(0.0);
+        camera.translation =
+            player_transform.translation + camera.back() * (hit.distance - 1.0).max(0.0);
     }
 }
 
