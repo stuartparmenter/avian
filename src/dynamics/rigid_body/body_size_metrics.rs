@@ -108,7 +108,7 @@ fn update_body_size_metrics<C: AnyCollider>(
         let mut sweep_radius: f32 = 0.0;
 
         // Find the minimum CCD thickness and maximum sweep radius.
-        for (entity, collider, collider_transform) in colliders.iter_many(rb_colliders) {
+        for (entity, collider, collider_transform) in colliders.iter_many(rb_colliders).matched() {
             // Compute the CCD thickness
             let ctx = ColliderContext::new(entity, &context);
             let thickness = collider.ccd_thickness_with_context(ctx);
