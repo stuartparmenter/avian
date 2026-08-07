@@ -565,7 +565,8 @@ fn solve_swept_ccd(
 
         // Iterate through colliders intersecting the AABB of the CCD body.
         let intersecting_entities = contact_graph.entities_colliding_with(entity);
-        for (collider2, &ColliderOf { body: entity2 }) in colliders.iter_many(intersecting_entities)
+        for (collider2, &ColliderOf { body: entity2 }) in
+            colliders.iter_many(intersecting_entities).matched()
         {
             debug_assert_ne!(entity, entity2, "collider AABB cannot intersect itself");
 
