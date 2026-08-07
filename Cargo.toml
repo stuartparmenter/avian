@@ -10,3 +10,18 @@ std_instead_of_core = "warn"
 
 [profile.dev]
 opt-level = 1 # Use slightly better optimization, so examples work
+
+# Pin the bare bevyengine/bevy git deps to the fork's rtg-dev branch (bevy
+# main + the HDR/solari stack) so standalone builds resolve the same bevy
+# the committed lockfile records. Ignored when this workspace is consumed
+# as a dependency — cargo honors [patch] only at the consumer's root.
+[patch."https://github.com/bevyengine/bevy"]
+bevy = { git = "https://github.com/stuartparmenter/bevy", branch = "rtg-dev" }
+bevy_math = { git = "https://github.com/stuartparmenter/bevy", branch = "rtg-dev" }
+bevy_reflect = { git = "https://github.com/stuartparmenter/bevy", branch = "rtg-dev" }
+
+# Same reasoning: the jbuehler23 `bsn` deps reference glam_matrix_extras at
+# glam 0.32; the stuartparmenter fork carries the glam 0.33 bump matching
+# bevy main.
+[patch."https://github.com/jbuehler23/glam_matrix_extras"]
+glam_matrix_extras = { git = "https://github.com/stuartparmenter/glam_matrix_extras", branch = "bsn" }
