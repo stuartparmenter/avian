@@ -1,10 +1,8 @@
-use bevy_math::{
-    Quat, Vec3,
-    primitives::{
-        Capsule3d, Cone, Cuboid, Cylinder, InfinitePlane3d, Line3d, Plane3d, Polyline3d, Segment3d,
-        Sphere,
-    },
+use bevy::shape::{
+    Capsule3d, Cone, Cuboid, Cylinder, InfinitePlane3d, Line3d, Plane3d, Polyline3d, Segment3d,
+    Sphere,
 };
+use bevy_math::{Quat, Vec3};
 use parry::shape::SharedShape;
 
 use crate::{Collider, IntoCollider, RVector, ToRealPrecision};
