@@ -16,9 +16,9 @@ opt-level = 1 # Use slightly better optimization, so examples work
 # the committed lockfile records. Ignored when this workspace is consumed
 # as a dependency — cargo honors [patch] only at the consumer's root.
 [patch."https://github.com/bevyengine/bevy"]
-bevy = { git = "https://github.com/stuartparmenter/bevy", branch = "rtg-dev" }
-bevy_math = { git = "https://github.com/stuartparmenter/bevy", branch = "rtg-dev" }
-bevy_reflect = { git = "https://github.com/stuartparmenter/bevy", branch = "rtg-dev" }
+bevy = { git = "https://github.com/stuartparmenter/bevy", branch = "game-dev" }
+bevy_math = { git = "https://github.com/stuartparmenter/bevy", branch = "game-dev" }
+bevy_reflect = { git = "https://github.com/stuartparmenter/bevy", branch = "game-dev" }
 
 # Same reasoning: the jbuehler23 `bsn` deps reference glam_matrix_extras at
 # glam 0.32; the stuartparmenter fork carries the glam 0.33 bump matching
