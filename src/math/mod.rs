@@ -83,13 +83,13 @@ pub(crate) use bevy_math::IVec3 as IVector;
 ///
 /// This is a type alias for `Ray2d` in 2D and `Ray3d` in 3D.
 #[cfg(feature = "2d")]
-pub(crate) type Ray = Ray2d;
+pub(crate) type Ray = bevy::shape::Ray2d;
 
 /// The ray type used by Avian.
 ///
 /// This is a type alias for `Ray2d` in 2D and `Ray3d` in 3D.
 #[cfg(feature = "3d")]
-pub(crate) type Ray = Ray3d;
+pub(crate) type Ray = bevy::shape::Ray3d;
 
 /// The direction type used by Avian.
 ///
