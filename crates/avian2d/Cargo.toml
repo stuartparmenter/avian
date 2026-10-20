@@ -75,13 +75,13 @@ bench = false
 
 [dependencies]
 avian_derive = { path = "../avian_derive", version = "0.2" }
-bevy = { version = "0.20", default-features = false, features = [
+bevy = { version = "0.20.0-dev", default-features = false, features = [
     "std",
     "bevy_log",
 ] }
-bevy_curve = { version = "0.20", features = ["approx"] }
-bevy_math = { version = "0.20", features = ["approx"] }
-bevy_shape = { version = "0.20", features = ["approx"] }
+bevy_curve = { version = "0.20.0-dev", features = ["approx"] }
+bevy_math = { version = "0.20.0-dev", features = ["approx"] }
+bevy_shape = { version = "0.20.0-dev", features = ["approx"] }
 glam_matrix_extras = { version = "0.4", features = ["bevy_reflect"] }
 bevy_heavy = { version = "0.6" }
 bevy_transform_interpolation = { version = "0.6" }
@@ -102,7 +102,7 @@ disqualified = { version = "1.0" }
 
 [dev-dependencies]
 examples_common_2d = { path = "../examples_common_2d" }
-bevy = { version = "0.20", default-features = false, features = ["2d", "ui"] }
+bevy = { version = "0.20.0-dev", default-features = false, features = ["2d", "ui"] }
 bevy_heavy = { version = "0.6", features = ["approx"] }
 glam = { version = "0.33", features = ["bytemuck"] }
 bytemuck = "1.19"
